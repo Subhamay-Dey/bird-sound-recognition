@@ -1,3 +1,4 @@
+import BirdSoundsCarousel from "@/components/BirdSoundsCarousel";
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import SearchBar from "@/components/Searchbar";
@@ -10,6 +11,7 @@ const home = () => {
       <Header />
       <HeroBanner />
       <SearchBar />
+      <BirdSoundsCarousel />
     </View>
   );
 };
