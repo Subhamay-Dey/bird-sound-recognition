@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
+import { FlatList, ListRenderItem, StyleSheet, View } from "react-native";
 import { colors, spacing } from "../lib/theme";
 import BirdSoundCard from "./BirdSoundCard";
 
@@ -74,7 +74,6 @@ export default function BirdSoundsCarousel({
 
   return (
     <View style={styles.container}>
-      <Text style={styles.sectionTitle}>Bird Sounds</Text>
       <FlatList
         data={birds}
         renderItem={renderBirdCard}
