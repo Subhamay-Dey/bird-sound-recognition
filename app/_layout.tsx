@@ -4,18 +4,12 @@ import "./globals.css";
 export default function RootLayout() {
   return (
     <Stack>
-      <Stack.Screen
-        name="collection"
-        options={{
-          headerShown: false
-        }}
-      />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="index"
         options={{
-          headerShown: false
+          headerShown: false,
         }}
-      />
+      /> */}
     </Stack>
   );
 }
