@@ -89,7 +89,7 @@ export default function BirdSoundsCarousel({
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: spacing.lg,
+    paddingVertical: spacing.md,
   },
   sectionTitle: {
     fontSize: 16,
