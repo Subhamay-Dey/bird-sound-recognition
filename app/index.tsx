@@ -1,5 +1,14 @@
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
-  // return <Redirect href={"/home"} />;
-  return;
-}
+const home = () => {
+  return (
+    <View>
+      <Text>home</Text>
+    </View>
+  );
+};
+
+export default home;
+
+const styles = StyleSheet.create({});
