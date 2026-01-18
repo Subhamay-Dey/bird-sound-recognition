@@ -87,7 +87,7 @@ export default function BirdSoundCard({
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: "#E8F5E9",
+    backgroundColor: "#e9f2d5",
     borderRadius: radii.xl,
     padding: spacing.lg,
     gap: spacing.lg,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     gap: spacing.md,
   },
   birdName: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "700",
     color: colors.text,
   },

@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   premiumButton: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: colors.primary,
+    backgroundColor: "#91ae51",
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
     borderRadius: radii.xl,
