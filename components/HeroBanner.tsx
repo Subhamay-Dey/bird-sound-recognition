@@ -1,51 +1,65 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+    ImageBackground,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
+} from "react-native";
 import { colors, radii, spacing } from "../lib/theme";
 
 interface HeroBannerProps {
   onLearnMore?: () => void;
 }
 
+const bgImage = require("../assets/project/birdbackground.jpg");
+
 export default function HeroBanner({ onLearnMore }: HeroBannerProps) {
   return (
-    <View style={styles.container}>
-      {/* Left content */}
-      <View style={styles.leftContent}>
-        <Text style={styles.title}>
-          Useful knowledge and how to identify birds for birders
-        </Text>
-        <TouchableOpacity style={styles.learnMoreButton} onPress={onLearnMore}>
-          <Text style={styles.learnMoreText}>Learn more</Text>
-          <MaterialCommunityIcons
-            name="chevron-right"
-            size={20}
-            color={colors.text}
-          />
-        </TouchableOpacity>
-      </View>
+    <ImageBackground
+      source={bgImage}
+      style={styles.container}
+      imageStyle={styles.image}
+      resizeMode="cover"
+    >
+      <View style={styles.container}>
+        {/* Left content */}
+        <View style={styles.leftContent}>
+          <Text style={styles.title}>
+            Useful knowledge and how to identify birds for birders
+          </Text>
+          <TouchableOpacity
+            style={styles.learnMoreButton}
+            onPress={onLearnMore}
+          >
+            <Text style={styles.learnMoreText}>Learn more</Text>
+            <MaterialCommunityIcons
+              name="chevron-right"
+              size={20}
+              color={colors.text}
+            />
+          </TouchableOpacity>
+        </View>
 
-      {/* Bird image placeholder - you can replace with actual image */}
-      <View style={styles.birdImageContainer}>
-        <MaterialCommunityIcons
-          name="bird"
-          size={80}
-          color={colors.textOnPrimary}
-        />
+        {/* Bird image placeholder - you can replace with actual image */}
+        <View style={styles.birdImageContainer} />
       </View>
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: colors.primary,
     borderRadius: radii.xl,
-    padding: spacing.xl,
+    padding: spacing.xs,
     marginHorizontal: spacing.lg,
     marginVertical: spacing.lg,
     alignItems: "center",
     overflow: "hidden",
+  },
+  image: {
+    borderRadius: radii.xl,
   },
   leftContent: {
     flex: 1,
