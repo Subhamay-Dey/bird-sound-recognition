@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
   },
   listContent: {
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.md,
   },
 });

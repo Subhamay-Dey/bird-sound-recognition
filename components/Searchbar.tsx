@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     gap: spacing.sm,
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.md,
     alignItems: "center",
   },
   searchInput: {

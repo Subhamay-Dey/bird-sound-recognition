@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderRadius: radii.xl,
     padding: spacing.xs,
-    marginHorizontal: spacing.lg,
+    marginHorizontal: spacing.md,
     marginVertical: spacing.lg,
     alignItems: "center",
     overflow: "hidden",
