@@ -7,7 +7,7 @@ import { StyleSheet, View } from "react-native";
 
 const home = () => {
   return (
-    <View>
+    <View className="bg-white">
       <Header />
       <HeroBanner />
       <SearchBar />

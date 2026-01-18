@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.lg,
+    paddingVertical: spacing.md,
+    marginTop: spacing.lg,
   },
   settingsButton: {
     padding: spacing.sm,
