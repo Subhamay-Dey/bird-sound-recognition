@@ -17,7 +17,9 @@ export default function Header({
       <TouchableOpacity onPress={onSettingsPress} style={styles.settingsButton}>
         <MaterialCommunityIcons name="cog" size={24} color={colors.text} />
       </TouchableOpacity>
-      <Text style={styles.collectionText}>Collection</Text>
+      <View style={styles.collectionContainer}>
+        <Text style={styles.collectionText}>Collection</Text>
+      </View>
     </View>
   );
 }
@@ -28,8 +30,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: spacing.md,
-    paddingVertical: spacing.md,
-    marginTop: spacing.lg,
+    paddingVertical: spacing.lg,
+    marginTop: spacing.xxl,
   },
   settingsButton: {
     padding: spacing.sm,
@@ -37,6 +39,10 @@ const styles = StyleSheet.create({
     left: spacing.md,
   },
   collectionText: {
-    fontSize: 20,
+    fontSize: 26,
+  },
+  collectionContainer: {
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.md,
   },
 });

@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: spacing.md,
-    paddingVertical: spacing.md,
-    marginTop: spacing.lg,
+    paddingVertical: spacing.lg,
+    marginTop: spacing.xxxl,
   },
   settingsButton: {
     padding: spacing.sm,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#91ae51",
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
-    borderRadius: radii.xl,
+    borderRadius: radii.lg,
     gap: spacing.sm,
   },
   premiumText: {
