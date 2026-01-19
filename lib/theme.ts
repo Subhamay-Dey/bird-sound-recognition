@@ -1,3 +1,5 @@
+import { TextStyle } from "react-native";
+
 export const colors = {
   // Primary green
   primary: "#8BC34A",
@@ -43,7 +45,7 @@ export const radii = {
   round: 50,
 };
 
-export const typography = {
+export const typography: Record<string, TextStyle> = {
   h1: {
     fontSize: 28,
     fontWeight: "bold",
