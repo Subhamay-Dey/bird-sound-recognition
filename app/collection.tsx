@@ -1,14 +1,15 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import Header from "@/components/Collection/Header";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 
 const collection = () => {
   return (
-    <View>
-      <Text>collection</Text>
+    <View className="h-full bg-white">
+      <Header />
     </View>
-  )
-}
+  );
+};
 
-export default collection
+export default collection;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
