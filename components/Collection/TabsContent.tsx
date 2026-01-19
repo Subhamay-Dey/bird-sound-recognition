@@ -114,9 +114,8 @@ const styles = StyleSheet.create({
   // Header Styles
   header: {
     paddingHorizontal: spacing.lg,
-    paddingTop: spacing.lg,
     paddingBottom: spacing.md,
-    backgroundColor: colors.surface,
+    backgroundColor: "#ffffff",
   },
 
   headerTop: {
@@ -165,7 +164,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.lg,
     gap: spacing.sm,
-    backgroundColor: colors.surface,
+    backgroundColor: "#ffffff",
   },
 
   tab: {
