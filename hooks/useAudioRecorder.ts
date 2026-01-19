@@ -8,7 +8,7 @@ export function useAudioRecorder() {
   const [recordingTime, setRecordingTime] = useState(0);
   const [recordingUri, setRecordingUri] = useState<string | null>(null);
   const recordingRef = useRef<Audio.Recording | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     return () => {

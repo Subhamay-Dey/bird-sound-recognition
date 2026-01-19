@@ -1,13 +1,13 @@
-import { useState, useEffect, useRef } from "react";
-import { Camera, CameraType } from "expo-camera";
+import { CameraView } from "expo-camera";
 import * as ImagePicker from "expo-image-picker";
+import { useEffect, useRef, useState } from "react";
 import { requestCameraPermission } from "../utils/permissions";
 
 export function useCamera() {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
   const [capturedImage, setCapturedImage] = useState<string | null>(null);
-  const [cameraType, setCameraType] = useState(CameraType.back);
-  const cameraRef = useRef<Camera>(null);
+  const [cameraType, setCameraType] = useState(ImagePicker.CameraType.back);
+  const cameraRef = useRef<CameraView>(null);
 
   useEffect(() => {
     (async () => {
@@ -53,7 +53,9 @@ export function useCamera() {
 
   const toggleCameraType = () => {
     setCameraType((current) =>
-      current === CameraType.back ? CameraType.front : CameraType.back
+      current === ImagePicker.CameraType.back
+        ? ImagePicker.CameraType.front
+        : ImagePicker.CameraType.back,
     );
   };
 
@@ -67,4 +69,3 @@ export function useCamera() {
     toggleCameraType,
   };
 }
-
