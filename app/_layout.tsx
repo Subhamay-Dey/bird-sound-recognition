@@ -1,12 +1,11 @@
 import CustomTabBar from "@/components/BottomTabBar";
 import { PortalHost } from "@rn-primitives/portal";
-import { Slot, Tabs } from "expo-router";
+import { Tabs } from "expo-router";
 import "./globals.css";
 
 export default function RootLayout() {
   return (
     <>
-      <Slot />
       <PortalHost />
       <Tabs
         tabBar={(props) => <CustomTabBar {...props} />}

@@ -38,7 +38,7 @@ export default function TabsCard({
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} className="h-full bg-white">
       {/* Header Section - Fixed */}
       <View style={styles.header}>
         <View style={styles.historySection}>
