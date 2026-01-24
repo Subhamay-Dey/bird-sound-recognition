@@ -4,18 +4,18 @@ export const saveMediaToCache = async (
   uri: string,
   filename: string,
 ): Promise<string> => {
-  const cacheDir = FileSystem.cacheDirectory!;
-
-  const fileUri = cacheDir + filename;
-
+  const fileUri = `${FileSystem.cacheDirectory}${filename}`;
   await FileSystem.copyAsync({
     from: uri,
     to: fileUri,
   });
-
   return fileUri;
 };
 
 export const deleteMediaFromCache = async (uri: string): Promise<void> => {
-  await FileSystem.deleteAsync(uri, { idempotent: true });
+  try {
+    await FileSystem.deleteAsync(uri);
+  } catch (error) {
+    console.error("Error deleting file:", error);
+  }
 };

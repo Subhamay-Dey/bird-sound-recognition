@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
-    Animated,
-    Dimensions,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  Animated,
+  Dimensions,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 import { colors, radii, spacing, typography } from "../../lib/theme";
 
@@ -24,7 +24,6 @@ export default function TabsCard({
   const slideAnim = useRef(new Animated.Value(0)).current;
   const { width } = Dimensions.get("window");
 
-  // Trigger animation when tab changes
   useEffect(() => {
     Animated.timing(slideAnim, {
       toValue: activeTab === "collection" ? 0 : -width,
@@ -39,7 +38,6 @@ export default function TabsCard({
 
   return (
     <View style={styles.container} className="h-full bg-white">
-      {/* Header Section - Fixed */}
       <View style={styles.header}>
         <View style={styles.historySection}>
           <Text style={[typography.body, styles.historyLabel]}>History</Text>
@@ -51,7 +49,6 @@ export default function TabsCard({
         </View>
       </View>
 
-      {/* Tab Selector */}
       <View style={styles.tabSelector}>
         <Pressable
           style={[styles.tab, activeTab === "collection" && styles.tabActive]}

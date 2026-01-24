@@ -21,9 +21,9 @@ interface BirdSoundsCarouselProps {
 const SAMPLE_BIRDS: BirdSound[] = [
   {
     id: "1",
-    name: "Common Chiffchaff",
+    name: "Red-vented-Bulbul",
     description:
-      "The common chiffchaff (Phylloscopus collybita), or simply the chiffchaff, is a common and widespread leaf-warbler",
+      "The red-vented bulbul (Pycnonotus cafer) is a member of the bulbul family of passerines. It is a resident breeder across South Asia extending east to ",
     duration: "00:00",
   },
   {

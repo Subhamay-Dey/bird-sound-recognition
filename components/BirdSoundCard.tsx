@@ -73,11 +73,8 @@ export default function BirdSoundCard({
         <Image source={{ uri: imageUrl }} style={styles.birdImage} />
       ) : (
         <View style={styles.birdImagePlaceholder}>
-          <MaterialCommunityIcons
-            name="bird"
-            size={60}
-            color={colors.textSecondary}
-          />
+          source={require("../assets/project/camera.png")}
+          style={{ width: 32, height: 32 }}{" "}
         </View>
       )}
     </View>
