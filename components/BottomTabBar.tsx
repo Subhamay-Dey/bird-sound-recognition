@@ -8,6 +8,9 @@ export default function CustomTabBar({ state, descriptors, navigation }: any) {
   const router = useRouter();
   const pathname = usePathname();
 
+  // Hide tab bar on scan screen to prevent it jumping up
+  if (pathname === "/scan") return null;
+
   return (
     <View style={styles.tabBarContainer}>
       <View style={styles.tabBar}>
@@ -152,7 +155,7 @@ const styles = StyleSheet.create({
   centerButton: {
     width: 70,
     height: 70,
-    borderRadius: "50%",
+    borderRadius: 35,
     backgroundColor: "#7BA05B",
     alignItems: "center",
     justifyContent: "center",
