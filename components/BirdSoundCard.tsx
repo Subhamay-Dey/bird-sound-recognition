@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { colors, radii, spacing } from "../lib/theme";
 
 interface BirdSoundCardProps {
@@ -69,14 +69,14 @@ export default function BirdSoundCard({
       </View>
 
       {/* Bird image */}
-      {imageUrl ? (
+      {/* {imageUrl ? (
         <Image source={{ uri: imageUrl }} style={styles.birdImage} />
       ) : (
         <View style={styles.birdImagePlaceholder}>
           source={require("../assets/project/camera.png")}
           style={{ width: 32, height: 32 }}{" "}
         </View>
-      )}
+      )} */}
     </View>
   );
 }
