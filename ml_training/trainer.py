@@ -1,8 +1,8 @@
+import numpy as np
 import tensorflow as tf
 from tensorflow.keras.callbacks import (
     ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, TensorBoard
 )
-
 class ModelTrainer:
     def __init__(self, model, base_model, num_classes):
         self.model = model
@@ -12,7 +12,7 @@ class ModelTrainer:
         self.model.compile(
             optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
             loss='sparse_categorical_crossentropy',
-            metrics=['accuracy', tf.keras.metrics.TopKCategoricalAccuracy(k=5, name='top5_acc')]
+            metrics=['accuracy', tf.keras.metrics.SparseTopKCategoricalAccuracy(k=5, name='top5_acc')]
         )
     
     def get_callbacks(self, model_name):

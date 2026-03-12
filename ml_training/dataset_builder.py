@@ -1,7 +1,10 @@
 import tensorflow as tf
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
+from pathlib import Path
 import pickle
+from audio_preprocessor import AudioPreprocessor
+from image_preprocessor import ImagePreprocessor
 
 class BirdDatasetBuilder:
     def __init__(self, audio_dir, image_dir):
